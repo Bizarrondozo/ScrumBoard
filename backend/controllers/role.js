@@ -20,7 +20,6 @@ const registerRole = async(req, res) => {
     if (!result)
         return res.status(401).send("Failed to register role");
     return res.status(200).send({ role });
-
 };
 
 const listRole = async(req, res) => {
@@ -28,8 +27,6 @@ const listRole = async(req, res) => {
     if (!role || role.lenght === 0)
         return res.status(401).send("No role found");
     return res.status(200).send({ role });
-
-
 };
 
 module.exports = { registerRole, listRole };

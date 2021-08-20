@@ -38,6 +38,7 @@ const registerUser = async(req, res) => {
         return res.status(400).send("Process failed: Failed to register user");
     }
 };
+
 const listUser = async(req, res) => {
     let user = await User.find({
             name: new RegExp(req.params["name"], "i"),
